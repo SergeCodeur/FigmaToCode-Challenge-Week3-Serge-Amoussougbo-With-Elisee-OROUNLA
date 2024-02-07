@@ -19,6 +19,7 @@ const config: Config = {
       alfa_slab_one: ["Alfa Slab One", "serif"],
     },
     fontSize: {
+      base: "16px",
       xs: [
         "12px",
         {
@@ -31,8 +32,14 @@ const config: Config = {
           lineHeight: "20px",
         },
       ],
-      lg: "16px",
       md: ["20px", { lineHeight: "30px" }],
+      lg: [
+        "24px",
+        {
+          fontWeight: "700",
+          lineHeight: "32px",
+        },
+      ],
       xsl: [
         "14px",
         {
@@ -78,6 +85,7 @@ const config: Config = {
     },
     extend: {
       colors: {
+        transparent: "transparent",
         primary: "#23A6F0",
         secondary_1: "#23856D",
         secondary_2: "#3C403D",
@@ -94,8 +102,8 @@ const config: Config = {
         primary_text: "#23A6F0",
         secondary_text_1: "#40BB15",
         secondary_text_2: "#3C403D",
-        text: "#252B42",
-        second: "#737373",
+        text_color: "#252B42",
+        second_text_color: "#737373",
         light: "#FFFFFF",
         sucess_text: "#2DC071",
         alert_text: "#E77C40",
