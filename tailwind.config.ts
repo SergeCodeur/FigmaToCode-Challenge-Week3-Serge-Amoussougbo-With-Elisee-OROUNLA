@@ -19,7 +19,12 @@ const config: Config = {
       alfa_slab_one: ["Alfa Slab One", "serif"],
     },
     fontSize: {
-      base: "16px",
+      base: [
+        "16px",
+        {
+          lineHeight: "24px",
+        },
+      ],
       xs: [
         "12px",
         {
