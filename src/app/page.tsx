@@ -1,9 +1,13 @@
-import Navbar from "@/components/Navbar";
+import HeroBanner from "@/components/about/HeroBanner";
+import ProblemStatement from "@/components/about/ProblemStatement";
+import Stats from "@/components/about/Stats";
 
-export default function Home() {
+export default function About() {
   return (
     <main className="">
-      <Navbar />
+      <HeroBanner />
+      <ProblemStatement />
+      <Stats />
     </main>
   );
 }
