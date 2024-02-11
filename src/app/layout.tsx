@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
@@ -6,6 +7,8 @@ import "./globals.css";
 
 const monserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "400", "500", "600", "700"],
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
@@ -25,6 +28,7 @@ export default function RootLayout({
           <Navbar />
         </header>
         <React.Fragment>{children}</React.Fragment>
+        <Footer />
       </body>
     </html>
   );
