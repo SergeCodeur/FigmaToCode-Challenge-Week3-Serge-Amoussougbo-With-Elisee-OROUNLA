@@ -82,20 +82,20 @@ export const Footer = () => {
               <FootBlock key={index} data={item} />
             ))}
           </div>
-          <div className="md:max-w-md lg:col-span-2">
+          <div className="md:max-w-md lg:col-span-2 mb-12">
             <span className="text-base font-bold tracking-wide font-monserrat text-text_color">
               Get In Touch
             </span>
-            <form className="flex flex-col mt-4 md:flex-row">
+            <form className="flex flex-col- mt-4 md:flex-row mb-5">
               <input
                 placeholder="Email"
                 required
                 type="text"
-                className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-[#F9F9F9] border border-[#E6E6E6] rounded-l shadow-sm appearance-none md:mr-0 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-[#F9F9F9] border border-[#E6E6E6] rounded-l shadow-sm appearance-none md:mr-0 md:mb-0 focus:border-primary focus:outline-none focus:shadow-outline"
               />
               <button
                 type="submit"
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-r shadow-md bg-primary hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-r shadow-md bg-primary hover:bg-primary focus:shadow-outline focus:outline-none"
               >
                 Subscribe
               </button>
@@ -108,8 +108,8 @@ export const Footer = () => {
       </div>
       <div className="border-t border-gray-80  bg-gray-100">
         <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl  flex flex-col justify-between pt-5 pb-5 px-4 sm:flex-row">
-          <p className="text-sm text-bold text-text_color font-montserrat">
-            Made With Love By Finland All Right Reserved
+          <p className="text-sm font-medium text-center text-text_color font-montserrat">
+            Made With Love By <br className="md:hidden lg:hidden" /> Finland All Right Reserved
           </p>
           {/* <div className="flex items-center mt-4 space-x-4 sm:mt-0">
               <a
