@@ -14,8 +14,8 @@ const Routes = [
     path: "/",
   },
   {
-    name: "Product",
-    path: "#",
+    name: "Team",
+    path: "/team",
   },
   {
     name: "Pricing",
