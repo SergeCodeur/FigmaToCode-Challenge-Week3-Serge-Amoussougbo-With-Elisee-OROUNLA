@@ -11,7 +11,7 @@ import { Button } from "./ui/button";
 const Routes = [
   {
     name: "Home",
-    path: "#",
+    path: "/",
   },
   {
     name: "Product",
@@ -19,11 +19,11 @@ const Routes = [
   },
   {
     name: "Pricing",
-    path: "#",
+    path: "/pricing",
   },
   {
     name: "Contact",
-    path: "#",
+    path: "/contact",
   },
 ];
 
@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="lg:min-w-[187px]">
           <Link
             href="#"
-            className="text-lg text text_color font-monserrat z-[15] max-md:relative"
+            className="text-lg text-text_color font-monserrat z-[15] max-md:relative"
           >
             Bandage
           </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
               <li key={index}>
                 <Link
                   href={route.path}
-                  className="text-second_text_color text-xl font-monserrat max-md:text-2xl "
+                  className="text-second_text_color hover:text-primary text-xl font-monserrat max-md:text-2xl "
                 >
                   {route.name}
                 </Link>
