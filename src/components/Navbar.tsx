@@ -36,6 +36,13 @@ const Navbar = () => {
       ? (document.body.style.overflow = "auto")
       : (document.body.style.overflow = "hidden");
   };
+  const handleLinkClick = () => {
+    // If mobile and navbar open, close nav and restore scroll on click
+    if (window.innerWidth < 768 && toggleNav) {
+      setToggleNav(false);
+      document.body.style.overflow = "auto";
+    }
+  };
   return (
     <MaxContentWidthWrapper className="py-[16px]">
       <nav className="flex gap-[41px] items-center relative h-[58px]">
@@ -59,7 +66,7 @@ const Navbar = () => {
                 <Link
                   href={route.path}
                   className="text-second_text_color hover:text-primary text-xl font-monserrat max-md:text-2xl "
-                  onClick={() => setToggleNav(!toggleNav)}
+                  onClick={handleLinkClick}
                 >
                   {route.name}
                 </Link>
