@@ -59,6 +59,7 @@ const Navbar = () => {
                 <Link
                   href={route.path}
                   className="text-second_text_color hover:text-primary text-xl font-monserrat max-md:text-2xl "
+                  onClick={() => setToggleNav(!toggleNav)}
                 >
                   {route.name}
                 </Link>
