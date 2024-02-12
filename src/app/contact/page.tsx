@@ -1,6 +1,8 @@
+import MaxContentWidthWrapper from "@/components/MaxContentWidthWrapper";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa6";
 import Cta from "./cta";
 
 function Contact() {
@@ -117,69 +119,62 @@ function Contact() {
       </div>
     );
   };
-  const sociallink = [
-    {
-      icon: "bi-twitter",
-      link: "/",
-    },
-    {
-      icon: "bi-facebook",
-      link: "/",
-    },
-    {
-      icon: "bi-instagram",
-      link: "/",
-    },
-    {
-      icon: "bi-linkedin",
-      link: "/",
-    },
-  ];
   return (
     <div className="">
-      <div className="flex  box-border sm:max-w-xl md:max-w-full lg:max-w-screen-xl mx-auto w-full flex-wrap">
+      <MaxContentWidthWrapper className="flex box-border flex-wrap">
         <div className="flex bg-green-20 w-full md:w-1/2 lg:w-1/2">
-          <div className="lg:pr-10 lg:pl-15 leading-6 flex flex-col gap-3 justify-center1 lg:pt-12 space-y-5-">
-            <h5 className="p-4 md:p-0 lg:p-0 md:mb-6 text-md font-semibold leading-none text-text_color text-center md:text-left">
+          <div className="lg:pr-10 lg:pl-15 leading-6 flex flex-col gap-3 justify-center1 lg:pt-12 space-y-[35px]">
+            <h5 className="p-4 md:p-0 lg:p-0 text-md font-semibold leading-none text-text_color text-center md:text-left">
               Contact us
             </h5>
-            <h3 className="mb-4 text-5xl md:text-6xl font-extrabold md:leading-12 text-text_color font-monserrat text-center mb:text-left lg:text-left">
+            <h3 className="text-5xl md:text-6xl font-extrabold md:leading-12 text-text_color font-monserrat text-center mb:text-left lg:text-left">
               Get in touch <br className=" md:block" /> today!
             </h3>
-            <p className="mb-6 p-5 text-center mb:text-left lg:text-left text-second_text_color text-2xl mb:p-0 lg:p-0">
-              We know how large objects will act,{" "}
+            <p className="p-5 text-center mb:text-left lg:text-left text-second_text_color text-md mb:p-0 lg:p-0">
+              We know how large objects will act,
               <br className="hidden md:block" />
               but things on a small scale
             </p>
-            <p className="mb-6 text-2xl text-text_color flex flex-col gap-2 text-center md:text-left lg:text-left">
-              <span className="font-bold">Phone : +451 215 215 </span> <br />
-              <span className="font-bold">Fax : +451 215 215 </span>
+            <p className="text-text_color flex flex-col gap-5 text-center md:text-left lg:text-left">
+              <span className="font-bold text-lg">Phone : +451 215 215 </span>
+              <span className="font-bold text-lg">Fax : +451 215 215 </span>
             </p>
-            <div className="flex items-center space-x-4 text-text_color mx-auto md:m-0 lg:m-0">
-              {sociallink?.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.link}
-                  className="transition-colors text-lg duration-300 hover:text-primary"
-                >
-                  <i className={`bi ${item.icon}`}></i>
-                </Link>
-              ))}
-            </div>
+            <ul className="inline-flex gap-[22px] max-w-[242px] max-md:mx-auto">
+              <li>
+                <a href="">
+                  <FaTwitter className="text-text_color" size={24.5} />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <FaFacebook className="text-text_color" size={24.5} />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <FaInstagram className="text-text_color" size={24.5} />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <FaLinkedin className="text-text_color" size={24.5} />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="flex w-full md:w-1/2 lg:w-1/2 justify-center pt-12 md:p-0 lg:p-0">
+        <div className="flex w-full md:w-1/2 lg:w-1/2 justify-end pt-12 md:p-0 lg:p-0">
           <Image
             src="/images/contact-1.svg"
-            className="lg:w-[80%] w-80 object-cover"
+            className="w-full"
             width={632}
             height={826}
             alt=""
           />
         </div>
-      </div>
+      </MaxContentWidthWrapper>
       {/* <ContactBanner /> */}
-      <div className="bg-[#FAFAFA]">
+      <div>
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
             <h2 className="text-center max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-text_color sm:text-4xl md:mx-auto">

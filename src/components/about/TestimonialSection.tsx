@@ -23,7 +23,7 @@ const TestimonialSection = () => {
           </Button>
         </div>
         <Image
-          className="absolute -right-[149px] top-0 lg:block hidden"
+          className="absolute -right-[34px] top-0 lg:block hidden"
           src={TestimonialsImage.src}
           alt=""
           width={590}
