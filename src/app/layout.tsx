@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import React from "react";
-import "./globals.css";
 
 const monserrat = Montserrat({
   subsets: ["latin"],
@@ -18,9 +17,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={monserrat.className}>
