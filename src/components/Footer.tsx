@@ -109,8 +109,8 @@ const Footer = () => {
           </ul>
         </div>
         <div className="py-[50px] flex gap-[30px] max-md:flex-col">
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-[30px]">
-            <div>
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-[30px] lg:w-[70%]">
+            <div className="min-w-[152px]">
               <h5 className="text-base text-text_color font-bold mb-5">
                 Company Info
               </h5>
@@ -127,7 +127,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div>
+            <div className="min-w-[152px]">
               <h5 className="text-base text-text_color font-bold mb-5">
                 Legal
               </h5>
@@ -144,7 +144,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div>
+            <div className="min-w-[152px]">
               <h5 className="text-base text-text_color font-bold mb-5">
                 Features
               </h5>
@@ -161,7 +161,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div>
+            <div className="min-w-[152px]">
               <h5 className="text-base text-text_color font-bold mb-5">
                 Resources
               </h5>
