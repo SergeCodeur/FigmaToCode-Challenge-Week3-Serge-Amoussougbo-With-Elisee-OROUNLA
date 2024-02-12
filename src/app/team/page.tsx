@@ -12,75 +12,106 @@ import Team6 from "@/assets/images/t6.png";
 import Team7 from "@/assets/images/t7.png";
 import Team8 from "@/assets/images/t8.png";
 import Team9 from "@/assets/images/t9.png";
+import MaxContentWidthWrapper from "@/components/MaxContentWidthWrapper";
 import { Button } from "@/components/ui/button";
+import { TeamCard } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
+import { SlArrowRight } from "react-icons/sl";
 
 function Page() {
   const team = [
     {
-      img: Team1,
-      imgWidth: 316,
-      imgHeight: 231,
-      title: "Username",
-      desc: "Username",
+      user_name: "Username",
+      image: Team1.src,
+      imageWidth: 316,
+      imageHeight: 231,
+      profession: "Username",
+      facebookLink: "#",
+      twitterLink: "#",
+      instagramLink: "#",
     },
     {
-      img: Team2,
-      imgWidth: 316,
-      imgHeight: 231,
-      title: "Username",
-      desc: "Username",
+      image: Team2.src,
+      imageWidth: 316,
+      imageHeight: 231,
+      user_name: "Username",
+      profession: "Username",
+      facebookLink: "#",
+      twitterLink: "#",
+      instagramLink: "#",
     },
     {
-      img: Team3,
-      imgWidth: 316,
-      imgHeight: 231,
-      title: "Username",
-      desc: "Username",
+      image: Team3.src,
+      imageWidth: 316,
+      imageHeight: 231,
+      user_name: "Username",
+      profession: "Username",
+      facebookLink: "#",
+      twitterLink: "#",
+      instagramLink: "#",
     },
     {
-      img: Team4,
-      imgWidth: 316,
-      imgHeight: 231,
-      title: "Username",
-      desc: "Username",
+      image: Team4.src,
+      imageWidth: 316,
+      imageHeight: 231,
+      user_name: "Username",
+      profession: "Username",
+      facebookLink: "#",
+      twitterLink: "#",
+      instagramLink: "#",
     },
     {
-      img: Team5,
-      imgWidth: 316,
-      imgHeight: 231,
-      title: "Username",
-      desc: "Username",
+      image: Team5.src,
+      imageWidth: 316,
+      imageHeight: 231,
+      user_name: "Username",
+      profession: "Username",
+      facebookLink: "#",
+      twitterLink: "#",
+      instagramLink: "#",
     },
     {
-      img: Team6,
-      imgWidth: 316,
-      imgHeight: 231,
-      title: "Username",
-      desc: "Username",
+      image: Team6.src,
+      imageWidth: 316,
+      imageHeight: 231,
+      user_name: "Username",
+      profession: "Username",
+      facebookLink: "#",
+      twitterLink: "#",
+      instagramLink: "#",
     },
     {
-      img: Team7,
-      imgWidth: 316,
-      imgHeight: 231,
-      title: "Username",
-      desc: "Username",
+      image: Team7.src,
+      imageWidth: 316,
+      imageHeight: 231,
+      user_name: "Username",
+      profession: "Username",
+      facebookLink: "#",
+      twitterLink: "#",
+      instagramLink: "#",
     },
     {
-      img: Team8,
-      imgWidth: 316,
-      imgHeight: 231,
-      title: "Username",
-      desc: "Username",
+      image: Team8.src,
+      imageWidth: 316,
+      imageHeight: 231,
+      user_name: "Username",
+      profession: "Username",
+      facebookLink: "#",
+      twitterLink: "#",
+      instagramLink: "#",
     },
     {
-      img: Team9,
-      imgWidth: 316,
-      imgHeight: 231,
-      title: "Username",
-      desc: "Username",
+      image: Team9.src,
+      imageWidth: 316,
+      imageHeight: 231,
+      user_name: "Username",
+      profession: "Username",
+      facebookLink: "#",
+      twitterLink: "#",
+      instagramLink: "#",
     },
   ];
   return (
@@ -91,10 +122,14 @@ function Page() {
           <h2 className="text-5xl font-bold text-text_color">
             Innovation <br className="lg:hidden md:hidden" /> tailored for you
           </h2>
-          <div className="flex gap-3 m-auto ">
-            <span className="font-semibold text-text_color">Home</span>
-            <i className="bi bi-chevron-right"></i>
-            <span className="text-second_text_color">Team</span>
+          <div className="py-2.5 flex gap-[15px] items-center mx-auto">
+            <Link className="text-text_color text-xl" href="/">
+              Home
+            </Link>
+            <SlArrowRight className="text-muted" />
+            <Link className="text-second_text_color text-xl" href="/pricing">
+              Team
+            </Link>
           </div>
         </div>
       </div>
@@ -146,7 +181,7 @@ function Page() {
           Meet Our <br className="md:hidden" /> Team
         </h3>
 
-        <div className="flex  box-border sm:max-w-xl md:max-w-full lg:max-w-screen-xl mx-auto w-full flex-wrap ">
+        {/* <div className="flex  box-border sm:max-w-xl md:max-w-full lg:max-w-screen-xl mx-auto w-full flex-wrap ">
           {team?.map((item, index) => (
             <div
               key={index}
@@ -174,7 +209,14 @@ function Page() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
+        <MaxContentWidthWrapper>
+          <div className="grid grid-cols-3 w-full gap-[30px] max-sm:grid-cols-1">
+            {team.map((team, index) => (
+              <TeamCard key={index} {...team} />
+            ))}
+          </div>
+        </MaxContentWidthWrapper>
       </div>
 
       <div className="px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12 my-5">
