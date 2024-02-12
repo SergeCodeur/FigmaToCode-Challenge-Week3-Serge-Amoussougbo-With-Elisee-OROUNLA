@@ -17,7 +17,11 @@ const HeroBanner = () => {
           <p className="text-secondary_text_2 text-md max-w-[376px] max-md:max-w-[274px] max-md:mx-auto">
             We know how large objects will act, but things on a small scale
           </p>
-          <Button variant="primary" size="md" className="h-[52px]">
+          <Button
+            variant="primary"
+            size="md"
+            className="h-[52px] text-light font-bold"
+          >
             Get Quote Now
           </Button>
         </div>
